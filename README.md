@@ -1,10 +1,11 @@
 # centian-benchmarks
-Raw benchmark data and reproduction assets for the governed-agent benchmark article ["Done!" — But Did Your Agent Actually Do the Work?](./index.md).
+Raw benchmark data and reproduction assets for the governed-agent benchmark article ["Done!" — But Did Your Agent Actually Do the Work?](https://t4cceptor.github.io/centian-benchmarks/).
 
 Links:
 
 - [Centian repository](https://github.com/T4cceptor/centian)
-- [Article](./index.md)
+- [Article in GH Pages](https://t4cceptor.github.io/centian-benchmarks/)
+- [Article in Repository](./index.md)
 - [Benchmark data](./benchmarks/centian_demo_v1/results)
 
 ## Benchmarks
