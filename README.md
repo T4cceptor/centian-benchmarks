@@ -55,6 +55,30 @@ centian benchmark run \
 - `--agent`: `gemini`, `codex`, `claude`, or `codex-ollama`
 - `--model`: use a valid model/profile for the selected agent, for example `haiku`, `sonnet`, `opus`, `gpt-5.4`, `gpt-5.4-mini`, `gemini-3-flash-preview`, or a local Ollama-backed profile such as `qwen35-local`
 
+## Ideal agent flow
+
+This benchmark uses the `guided_tdd_workflow` task template. The ideal run is:
+
+```mermaid
+flowchart TD
+    A["Register task in Centian<br/>template: guided_tdd_workflow"] --> B["Onboarding<br/>read prompt, constraints, and working directory rules"]
+    B --> C["Planning<br/>freeze contract:<br/>testCommand, testTarget, testFile,<br/>testName, lintCommand, expectedError,<br/>implementationTarget"]
+    C --> D["Scaffolding<br/>create package.json with type=module<br/>create scoreParentheses.test.js<br/>create scoreParentheses.js stub returning 0"]
+    D --> E["Red verification<br/>run node --test scoreParentheses.test.js<br/>confirm failure contains 0 !== 2"]
+    E --> F["Freeze execution baseline<br/>treat planned test artifact as locked for execution"]
+    F --> G["Implementation<br/>update scoreParentheses.js only<br/>make the failing test pass"]
+    G --> H["Validation<br/>run node --check scoreParentheses.js && node --check scoreParentheses.test.js"]
+    H --> I["Green verification<br/>run node --test scoreParentheses.test.js<br/>confirm exit code 0"]
+    I --> J["Invariant check<br/>test file unchanged since red baseline"]
+    J --> K["Complete task through Centian"]
+```
+
+Practical reading of the flow:
+
+- Plan first, then execute against that frozen contract.
+- Establish the red baseline before implementing the solution.
+- During implementation, change the production file, not the test, after the failing test has been confirmed.
+- Use only Centian-exposed tools and Node built-ins from the project root.
 
 ## Helpful info for benchmark runs
 
