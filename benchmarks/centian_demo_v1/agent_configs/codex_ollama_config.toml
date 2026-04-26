@@ -13,6 +13,10 @@ model = "gemma4-64k"
 model_provider = "ollama-custom"
 model = "qwen3-64k"
 
+[profiles.k26-cloud]
+model_provider = "ollama"
+model = "kimi-k2.6:cloud"
+
 [apps._default]
 enabled = true
 destructive_enabled = true
