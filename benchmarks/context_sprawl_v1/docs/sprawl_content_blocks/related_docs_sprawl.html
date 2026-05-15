@@ -1,0 +1,15 @@
+<li>The endpoint requires the <code>region_code</code> field to match the ISO 3166-2 subdivision format when the <code>tenant_id</code> belongs to a geo-partitioned cluster, and rejects any payload where the declared region does not correspond to the tenant's provisioned data residency boundary.</li>
+
+<li>The API validates that the <code>start_date</code> field, if provided, does not precede the tenant's own activation timestamp stored in the provisioning service; requests with a <code>start_date</code> earlier than the tenant activation date receive a <code>409 Conflict</code> response.</li>
+
+<li>When the custom header <code>X-MyOrg-Idempotency-Key</code> is present, the endpoint deduplicates requests by storing a hash of the full payload body for a rolling window of 72 hours, returning the original response for any duplicate submission without re-executing user creation.</li>
+
+<li>The <code>feature_flags</code> array accepts only keys listed in the tenant's current feature entitlements document; any flag not present in the entitlements service response is silently stripped from the payload before persistence.</li>
+
+<li>The endpoint enforces a burst limit of 12 requests per second per <code>tenant_id</code>, measured over a sliding 60-second window, and responds with <code>429 Too Many Requests</code> when the threshold is exceeded, including a <code>Retry-After</code> header set to the number of seconds until the window resets.</li>
+
+<li>The <code>middle_name</code> field is deprecated as of API version 2 and is accepted only when the request includes the query parameter <code>?include_deprecated_fields=true</code>; otherwise, the field is removed from the payload during pre-processing and logged as a warning.</li>
+
+<li>The API rejects any <code>user_id</code> provided in the request body that collides with a soft-deleted user record still within the 30-day retention period, unless the <code>X-MyOrg-Force-Recreate</code> header is set to <code>"purge"</code> and the tenant has the <code>force_user_recreate</code> entitlement enabled.</li>
+
+<li>The <code>auth_source</code> field defaults to <code>"oidc"</code> when omitted, but the endpoint validates that the specified source is among the authentication providers configured for the tenant; requests referencing a provider not registered in the tenant's identity federation configuration are rejected with a <code>422 Unprocessable Entity</code> status.</li>

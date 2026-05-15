@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>MyOrgAPI — List User Views Endpoint</title>
+  </head>
+  <body>
+    <main>
+      <h1>MyOrgAPI — List User Views Endpoint</h1>
+      <h2>GET /user_views</h2>
+      <p>The endpoint retrieves saved view configurations for the user directory, allowing clients to fetch predefined filters, column layouts, and sorting preferences. It accepts query parameters for pagination and filtering by view ownership scope.</p>
+      <pre><code>{
+  "view_id": string,
+  "label": string,
+  "owner_type": "user" | "team" | "tenant",
+  "owner_id": string,
+  "filters": [
+    {
+      "field": string,
+      "operator": "eq" | "neq" | "contains" | "gte" | "lte",
+      "value": string
+    }
+  ],
+  "columns": [string],
+  "sort_field": string,
+  "sort_direction": "asc" | "desc",
+  "is_default": boolean,
+  "created_at": string,
+  "updated_at": string
+}</code></pre>
+      <h2>Rules</h2>
+      <ol>
+        <li><p>The endpoint returns only views where the <code>owner_type</code> is <code>"tenant"</code> when the request omits the <code>X-MyOrg-View-Scope</code> header; including the header with a value of <code>"all"</code> exposes team-scoped and user-scoped views accessible to the authenticated principal.</p></li>
+        <li><p>When the query parameter <code>?include_system_defaults=true</code> is present, the response includes a set of read-only views maintained by MyOrg that have the <code>owner_type</code> set to <code>"system"</code> and the <code>owner_id</code> field populated with a reserved UUID prefix of <code>00000000-0000-4000</code>.</p></li>
+        <li><p>The API validates that any <code>filters</code> array element referencing a field name not present in the tenant's user schema definition is rejected with a <code>422 Unprocessable Entity</code> error that lists the unrecognized field names in the response body.</p></li>
+        <li><p>Views created with the <code>is_default</code> flag set to <code>true</code> are deduplicated server-side: the endpoint automatically sets <code>is_default</code> to <code>false</code> on any other view sharing the same <code>owner_type</code> and <code>owner_id</code> before persisting the new default.</p></li>
+        <li><p>The <code>columns</code> array must contain at least one entry that maps to a displayable attribute in the tenant's directory schema; requests with a <code>columns</code> array entirely composed of non-displayable or internal-only attributes receive a <code>400 Bad Request</code> response.</p></li>
+        <li><p>The endpoint enforces a maximum of 50 saved views per <code>owner_id</code> within any <code>owner_type</code> scope; a <code>POST</code> request that would exceed this quota returns a <code>409 Conflict</code> status with a <code>X-MyOrg-Quota-Limit</code> header indicating the cap.</p></li>
+        <li><p>The <code>sort_field</code> value is validated against the union of the <code>columns</code> array and a reserved set of system fields (<code>created_at</code>, <code>updated_at</code>, <code>last_sign_in</code>); specifying a <code>sort_field</code> outside this union causes the endpoint to fall back to sorting by <code>created_at</code> descending and include a warning in the <code>X-MyOrg-Sort-Fallback</code> response header.</p></li>
+        <li><p>The endpoint paginates results using cursor-based pagination when the <code>Accept</code> header includes <code>application/vnd.myorg.v2+json</code>; clients using the default media type receive offset-based pagination with <code>page</code> and <code>per_page</code> query parameters, which is deprecated and will be removed in API version 5.</p></li>
+      </ol>
+    </main>
+  </body>
+</html>
