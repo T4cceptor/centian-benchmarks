@@ -1,0 +1,6 @@
+
+===== Demo run 2026-05-15T11:00:27+02:00 (gemini) =====
+[ERROR] [IDEClient] Failed to connect to IDE companion extension. Please ensure the extension is running. To install the extension, run /ide install.
+Error executing tool mcp_centian_centian.task_complete_planning: Error: MCP tool 'centian.task_complete_planning' reported an error.
+Attempt 1 failed: You have exhausted your capacity on this model. Your quota will reset after 0s.. Retrying after 5697ms...
+Error executing tool mcp_centian_centian.task_complete_planning: Error: MCP tool 'centian.task_complete_planning' reported an error.

@@ -1,0 +1,156 @@
+
+===== Demo run 2026-05-15T09:58:07+02:00 (gemini) =====
+{
+  "session_id": "5980498b-f2db-420f-aa13-2a6a9c8a46d6",
+  "response": "The task is complete. The bug causing a 400 error for free-plan tenants has been resolved by updating `user_payload.py` to pop the `role` field from the user payload when the `tenant_id` starts with `free_`. A standard library `unittest` regression test was written in `test_regression.py` and the Centian TDD workflow was successfully executed to completion.",
+  "stats": {
+    "models": {
+      "gemini-3.1-pro-preview": {
+        "api": {
+          "totalRequests": 19,
+          "totalErrors": 0,
+          "totalLatencyMs": 83599
+        },
+        "tokens": {
+          "input": 41434,
+          "prompt": 199345,
+          "candidates": 1357,
+          "total": 204461,
+          "cached": 157911,
+          "thoughts": 3759,
+          "tool": 0
+        },
+        "roles": {
+          "main": {
+            "totalRequests": 19,
+            "totalErrors": 0,
+            "totalLatencyMs": 83599,
+            "tokens": {
+              "input": 41434,
+              "prompt": 199345,
+              "candidates": 1357,
+              "total": 204461,
+              "cached": 157911,
+              "thoughts": 3759,
+              "tool": 0
+            }
+          }
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 19,
+      "totalSuccess": 18,
+      "totalFail": 1,
+      "totalDurationMs": 1290,
+      "totalDecisions": {
+        "accept": 19,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {
+        "mcp_centian_centian.task_register": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 38,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_docs___get_docs": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 43,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_filesystem___read_text_file": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 24,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_centian.task_complete_onboarding": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 17,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_centian.task_complete_planning": {
+          "count": 2,
+          "success": 1,
+          "fail": 1,
+          "durationMs": 32,
+          "decisions": {
+            "accept": 2,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_centian.task_start_step": {
+          "count": 5,
+          "success": 5,
+          "fail": 0,
+          "durationMs": 547,
+          "decisions": {
+            "accept": 5,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_filesystem___write_file": {
+          "count": 4,
+          "success": 4,
+          "fail": 0,
+          "durationMs": 107,
+          "decisions": {
+            "accept": 4,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_centian.task_complete_step": {
+          "count": 4,
+          "success": 4,
+          "fail": 0,
+          "durationMs": 482,
+          "decisions": {
+            "accept": 4,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        }
+      }
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}

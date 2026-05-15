@@ -1,0 +1,17 @@
+{
+  "ideMode": false,
+  "mcp": {
+    "allowed": [
+      "centian"
+    ]
+  },
+  "mcpServers": {
+    "centian": {
+      "httpUrl": "http://127.0.0.1:52265/mcp/taskverification",
+      "trust": false
+    }
+  },
+  "tools": {
+    "core": []
+  }
+}

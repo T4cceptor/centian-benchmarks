@@ -1,0 +1,29 @@
+
+===== Demo run 2026-05-15T09:49:12+02:00 (gemini) =====
+[ERROR] [IDEClient] Failed to connect to IDE companion extension. Please ensure the extension is running. To install the extension, run /ide install.
+Tool with name "mcp_centian_centian.task_complete_onboarding" is already registered. Overwriting.
+Tool with name "mcp_centian_centian.task_complete_planning" is already registered. Overwriting.
+Tool with name "mcp_centian_centian.task_complete_step" is already registered. Overwriting.
+Tool with name "mcp_centian_centian.task_fail" is already registered. Overwriting.
+Tool with name "mcp_centian_centian.task_list_templates" is already registered. Overwriting.
+Tool with name "mcp_centian_centian.task_register" is already registered. Overwriting.
+Tool with name "mcp_centian_centian.task_restart" is already registered. Overwriting.
+Tool with name "mcp_centian_centian.task_resume" is already registered. Overwriting.
+Tool with name "mcp_centian_centian.task_start_step" is already registered. Overwriting.
+Tool with name "mcp_centian_docs___get_docs" is already registered. Overwriting.
+Tool with name "mcp_centian_filesystem___create_directory" is already registered. Overwriting.
+Tool with name "mcp_centian_filesystem___directory_tree" is already registered. Overwriting.
+Tool with name "mcp_centian_filesystem___edit_file" is already registered. Overwriting.
+Tool with name "mcp_centian_filesystem___get_file_info" is already registered. Overwriting.
+Tool with name "mcp_centian_filesystem___list_allowed_directories" is already registered. Overwriting.
+Tool with name "mcp_centian_filesystem___list_directory" is already registered. Overwriting.
+Tool with name "mcp_centian_filesystem___list_directory_with_sizes" is already registered. Overwriting.
+Tool with name "mcp_centian_filesystem___move_file" is already registered. Overwriting.
+Tool with name "mcp_centian_filesystem___read_file" is already registered. Overwriting.
+Tool with name "mcp_centian_filesystem___read_media_file" is already registered. Overwriting.
+Tool with name "mcp_centian_filesystem___read_multiple_files" is already registered. Overwriting.
+Tool with name "mcp_centian_filesystem___read_text_file" is already registered. Overwriting.
+Tool with name "mcp_centian_filesystem___search_files" is already registered. Overwriting.
+Tool with name "mcp_centian_filesystem___write_file" is already registered. Overwriting.
+Tool with name "mcp_centian_shell___execute_command" is already registered. Overwriting.
+Error executing tool mcp_centian_centian.task_complete_planning: Error: MCP tool 'centian.task_complete_planning' reported an error.

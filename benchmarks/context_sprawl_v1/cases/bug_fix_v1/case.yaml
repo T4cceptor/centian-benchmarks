@@ -1,0 +1,25 @@
+version: "0.1"
+
+case:
+  id: "bug_fix_v1"
+  name: "MyOrgAPI payload bug fix"
+  description: "Fix a MyOrgAPI payload bug after consulting injected API documentation."
+
+promptFile: "prompt.yaml"
+
+fixture:
+  seedPath: "fixture"
+  resetMode: "copy_seed"
+  startingRepoStateSummary: "Python payload builder with existing regression coverage; one reported behavior is not covered yet."
+
+expectations:
+  selectedCommand: "python3 -m unittest -q test_user_payload.py test_regression.py"
+  redSignal:
+    type: "output_contains"
+    value: "AssertionError"
+  greenConditionSummary: "The selected Python unittest command exits 0 after adding the regression test and fixing the reported bug."
+
+constraints:
+  lockedPaths:
+    - ".benchmark-lock"
+  allowedAdditionalPaths: []
