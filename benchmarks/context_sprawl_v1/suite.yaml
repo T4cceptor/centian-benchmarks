@@ -1,0 +1,14 @@
+version: "0.1"
+
+suite:
+  id: "context_sprawl_v1"
+  name: "Context Sprawl Benchmark Suite v1"
+  description: "Bug-fix TDD benchmark for measuring comprehension under documentation sprawl."
+  templateId: "guided_tdd_workflow"
+  localOnly: true
+  scoringSchemaVersion: "v1"
+  executionProtocolVersion: "v1"
+
+cases:
+  - id: "bug_fix_v1"
+    path: "cases/bug_fix_v1"

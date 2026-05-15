@@ -1,0 +1,27 @@
+prompt: |
+  Connect to the MCP server named `centian` and solve this Python TDD task through the Centian workflow.
+  Use `guided_tdd_workflow` for your task registration.
+
+  Problem:
+
+  A free-plan user reported that creating additional users for their tenant in the MyOrgAPI returns a 400 error.
+  The existing code at `user_payload.py` builds the API payload.
+  Use `get_docs` to retrieve the MyOrgAPI specification, then fix the bug using test-driven development.
+
+  Existing project shape:
+
+  - `user_payload.py` contains the current implementation for the payload creation.
+  - `user_payload.py`, `test_user_payload.py` and the new test you are writing is the only relevant code You can ignore other code and accept that no other code might be visible.
+  - `test_user_payload.py` already contains regression coverage for existing supported behavior.
+  - Add the new failing regression in `test_regression.py`.
+
+  Requirements:
+
+  - Retrieve the API documentation with `get_docs` before deciding what behavior to test.
+  - Start by adding a failing standard-library `unittest` regression for the bug report in `test_regression.py`.
+  - Do not change `test_user_payload.py`; it is existing regression coverage.
+  - Use only Python standard-library tooling already available in the environment.
+  - Establish a failing test first, then implement the minimal fix.
+  - Treat the Centian project root as the working directory and use project-relative paths.
+
+  IMPORTANT: Use Centian lifecycle tools as the source of truth, rely only on Centian-exposed project tools, and stop after the task is completed.

@@ -38,10 +38,12 @@ workflow:
     tools_allowed:
       - "shell__*"
       - "filesystem__*"
+      - "docs__*"
   planning:
     tools_allowed:
       - "shell__*"
       - "filesystem__*"
+      - "docs__*"
     editable_fields:
       - "parameters.testCommand"
       - "parameters.testTarget"

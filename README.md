@@ -11,6 +11,7 @@ Links:
 ## Benchmarks
 
 - Guided TDD workflow: [benchmarks/centian_demo_v1](./benchmarks/centian_demo_v1)
+- Context sprawl v1: [benchmarks/context_sprawl_v1](./benchmarks/context_sprawl_v1)
 
 ## Getting started
 
@@ -19,6 +20,7 @@ Links:
 - `centian` (`>=v0.4`) available on your `PATH`
   - Install with `curl -fsSL https://raw.githubusercontent.com/T4cceptor/centian/main/scripts/install.sh | bash`
 - `node` (tested with `v24.2.0`) and `npx` (tested with `11.3.0`) available on your `PATH` - required to launch filesystem and shell MCP servers, and run tests
+- `python3` available on your `PATH` - required for the Python-based `context_sprawl_v1` benchmark fixture
 - Claude Code, Gemini CLI, or OpenAI Codex installed and authenticated - Centian launches the selected agent in headless mode through its local CLI, so the demo will fail if that agent binary is missing or it's not signed in.
 - For `codex-ollama`, make sure local Ollama is running at `http://localhost:11434/v1`. Centian provides built-in `gemma4-local` and `qwen-local` Codex OSS profiles, and you can override the base Codex config with `--codex-config`.
 
