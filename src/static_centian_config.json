@@ -15,7 +15,7 @@
       "eventStorage": {
         "enabled": true,
         "driver": "sqlite",
-        "path": "/Users/brb/_devspace/centian-benchmarks/benchmarks/context_sprawl_v1/results/context_sprawl_v1.sqlite"
+        "path": "./merged.sqlite"
       },
       "testTools": {
         "enabled": false
