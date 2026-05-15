@@ -22,5 +22,4 @@ expectations:
 constraints:
   lockedPaths:
     - ".benchmark-lock"
-  allowedAdditionalPaths:
-    - "test_regression.py"
+  allowedAdditionalPaths: []

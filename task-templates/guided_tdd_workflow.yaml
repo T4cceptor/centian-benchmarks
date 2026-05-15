@@ -66,6 +66,7 @@ workflow:
       tools_allowed:
         - "shell__*"
         - "filesystem__*"
+        - "docs__*"
       instructions: |
         Create the planned test file as a new artifact. Keep this step additive.
       checks:
@@ -82,6 +83,7 @@ workflow:
       tools_allowed:
         - "shell__*"
         - "filesystem__*"
+        - "docs__*"
       instructions: |
         Add the planned test scaffold and make sure the implementation target exists. If the implementation file does not exist yet, create a minimal stub that preserves the planned failing baseline.
       checks:
@@ -105,6 +107,7 @@ workflow:
       tools_allowed:
         - "shell__*"
         - "filesystem__*"
+        - "docs__*"
       instructions: |
         Verify the planned test target already fails for the intended reason. No additional file edits should be required in this step.
         The pass/fail decision for this step comes from `centian.task_complete_step`.
@@ -126,6 +129,7 @@ workflow:
       tools_allowed:
         - "shell__*"
         - "filesystem__*"
+        - "docs__*"
       instructions: |
         Start this step before changing production code.
         Make the implementation pass the selected test, then let Centian verify the step.

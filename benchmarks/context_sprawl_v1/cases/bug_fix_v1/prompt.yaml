@@ -1,12 +1,12 @@
 prompt: |
   Connect to the MCP server named `centian` and solve this Python TDD task through the Centian workflow.
-  Use `guided_tdd_workflow` for your task registration.
+  Use `guided_tdd_workflow` for your task registration. FIRST register a task, THEN begin any work.
 
   Problem:
 
   A free-plan user reported that creating additional users for their tenant in the MyOrgAPI returns a 400 error.
   The existing code at `user_payload.py` builds the API payload.
-  Use `get_docs` to retrieve the MyOrgAPI specification, then fix the bug using test-driven development.
+  Use `get_docs` from the `docs` MCP to retrieve the MyOrgAPI specification, then fix the bug using test-driven development.
 
   Existing project shape:
 

@@ -65,15 +65,13 @@ Both return the same signal-only HTML. Noise profiles such as `1:1`, `1:3`, and 
 ## Run V1 locally
 
 ```bash
-centian benchmark run \
-  --suite ./benchmarks/context_sprawl_v1 \
-  --agent codex \
-  --model gpt-5.4 \
-  --repeat 1 \
-  --timeout 30m \
-  --template-dir "current=task-templates/" \
-  --centian-config benchmarks/context_sprawl_v1/centian_config.json
+./run-centian-demo-v1-benchmarks.sh \
+  --suite context_sprawl_v1 \
+  --scenario codex-gpt-5.4 \
+  --repeat 1
 ```
+
+The runner materializes the docs-server script path at launch time so the MCP process still starts correctly from Centian's copied benchmark workspace.
 
 ## Known gaps intentionally left open
 

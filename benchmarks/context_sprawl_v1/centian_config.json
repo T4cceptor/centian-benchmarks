@@ -12,7 +12,7 @@
     "capabilities": {
       "taskVerification": {
         "enabled": true,
-        "templatesPath": "./task-templates"
+        "templatesPath": "__TEMPLATES_DIR__"
       },
       "eventStorage": {
         "enabled": true,
@@ -29,6 +29,7 @@
       "setupGateway": true,
       "forceReadOnlyHints": true,
       "forceSafeToolHints": true,
+      "verificationRequirement": "required",
       "mcpServers": {
         "filesystem": {
           "command": "npx",
@@ -55,7 +56,7 @@
         "docs": {
           "command": "node",
           "args": [
-            "benchmarks/context_sprawl_v1/server/get_docs_server.mjs"
+            "__DOCS_SERVER__"
           ],
           "env": {
             "CONTEXT_SPRAW_PROFILE": "baseline"

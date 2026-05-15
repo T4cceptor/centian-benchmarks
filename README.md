@@ -36,21 +36,36 @@ That view is useful if you want the same level of detail shown in the article: p
 
 ### Run benchmarks
 
-The article benchmarks use [run-centian-demo-v1-benchmarks.sh](./run-centian-demo-v1-benchmarks.sh). Before running it, open the script and comment or uncomment the `run_scenario ...` lines at the end to choose the agent/model combinations you want.
-
-Run the configured scenarios:
+The article benchmarks use [run-centian-demo-v1-benchmarks.sh](./run-centian-demo-v1-benchmarks.sh). With no arguments it opens a small interactive wizard where you choose the suite, one or more agent/model scenarios, repeat count, and optional config overrides:
 
 ```bash
 ./run-centian-demo-v1-benchmarks.sh
+```
+
+For repeatable runs, use flags instead:
+
+```bash
+./run-centian-demo-v1-benchmarks.sh \
+  --suite context_sprawl_v1 \
+  --scenario codex-gpt-5.4 \
+  --repeat 1
+```
+
+Useful discovery commands:
+
+```bash
+./run-centian-demo-v1-benchmarks.sh --list-suites
+./run-centian-demo-v1-benchmarks.sh --list-scenarios
+./run-centian-demo-v1-benchmarks.sh --help
 ```
 
 Run a single benchmark directly:
 
 ```bash
 centian benchmark run \
-  --suite tests/integrationtests/taskverification/benchmarks/centian_demo_v1 \
+  --suite ./benchmarks/centian_demo_v1 \
   --agent gemini \
-  --model flash \
+  --model gemini-3-flash-preview \
   --repeat 1
 ```
 
@@ -84,24 +99,31 @@ Practical reading of the flow:
 
 ## Helpful info for benchmark runs
 
-`run-centian-demo-v1-benchmarks.sh` does not accept its own CLI flags. Instead, it builds a `centian benchmark run` command from environment variables and from the uncommented `run_scenario` calls at the end of the script.
+`run-centian-demo-v1-benchmarks.sh` now has two modes:
+
+- **wizard mode** when launched with no arguments
+- **flag mode** for explicit, repeatable runs
+
+Suites and scenario presets live near the top of the script. To add a future agent/model preset, add one row across the scenario arrays there; no more commenting runner calls in and out.
 
 Useful script inputs:
 
 | Variable | Default | Effect |
 | --- | --- | --- |
 | `CENTIAN_BIN` | `$(command -v centian)` | Path to the `centian` executable. The script exits if this path is missing or not executable. |
-| `SUITE_PATH` | `benchmarks/centian_demo_v1` | Benchmark suite passed to `--suite`. The script exits if the directory does not exist. |
+| `SUITE_PATH` | suite-selected default | Benchmark suite passed to `--suite`. The script exits if the directory does not exist. |
 | `REPEAT` | `10` | Repeat count passed to `--repeat`. |
-| `CODEX_CONFIG_PATH` | empty | Passed as `--codex-config`, but only for `codex` and `codex-ollama` scenarios. Ignored for `claude` and `gemini`. |
-| `CENTIAN_CONFIG_PATH` | empty | Passed as `--centian-config` for every scenario when set. |
-| `TEMPLATE_DIRS` | empty | Comma-separated list of template-dir values. Each non-empty entry becomes its own `--template-dir <value>` flag. |
+| `TIMEOUT` | `30m` | Timeout passed to `--timeout`. |
+| `CODEX_CONFIG_PATH` | scenario-specific default | Optional global override for `codex` and `codex-ollama` scenarios. |
+| `CENTIAN_CONFIG_PATH` | suite-selected default | Optional global override for the Centian config. |
+| `TEMPLATE_DIRS` | `current=task-templates` | Comma-separated list of template-dir values. Each non-empty entry becomes its own `--template-dir <value>` flag. |
 
 Good to know:
 
-- Every scenario always uses `--timeout 30m`.
-- Agent/model pairs are defined by the `run_scenario "<label>" "<agent>" "<model>"` lines at the bottom of the script.
-- Only uncommented scenarios run.
+- `--suite` accepts either a known suite id (`centian_demo_v1`, `context_sprawl_v1`) or a direct suite path.
+- Repeat `--scenario` to run multiple presets, or use `--all-scenarios`.
+- `--dry-run` prints the exact `centian benchmark run` commands without launching them.
+- Codex and Codex-Ollama presets now carry separate default config files in the scenario catalog.
 - There is no script-level reasoning-effort option. For Codex runs, use a preconfigured `CODEX_CONFIG_PATH` if you need that behavior.
 - The benchmark from the article is a governed TDD workflow. Success is not just “tests pass”; the agent also has to follow the workflow contract enforced by Centian.
 - Local Ollama-backed runs are practical for reproduction, but based on the article results they are much slower than API-backed runs on consumer hardware.
@@ -109,12 +131,11 @@ Good to know:
 Example: override suite/config/template settings
 
 ```bash
-CODEX_CONFIG_PATH=./benchmarks/centian_demo_v1/agent_configs/codex_ollama_config.toml \
-CENTIAN_CONFIG_PATH=./benchmarks/centian_demo_v1/centian_config.json \
-TEMPLATE_DIRS="current=./task-templates/" \
-SUITE_PATH=./benchmarks/centian_demo_v1 \
-REPEAT=1 \
-./run-centian-demo-v1-benchmarks.sh
+./run-centian-demo-v1-benchmarks.sh \
+  --suite centian_demo_v1 \
+  --scenario codex-ollama-qwen35 \
+  --repeat 1 \
+  --template-dirs "current=./task-templates/"
 ```
 
 Equivalent direct `centian benchmark run` shape for a single Codex Ollama scenario:
@@ -123,7 +144,7 @@ Equivalent direct `centian benchmark run` shape for a single Codex Ollama scenar
 centian benchmark run \
   --suite ./benchmarks/centian_demo_v1 \
   --agent codex-ollama \
-  --model qwen35-local \
+  --profile qwen35-local \
   --repeat 1 \
   --timeout 30m \
   --template-dir "current=task-templates/" \
