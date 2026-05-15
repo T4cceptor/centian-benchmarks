@@ -1,0 +1,12 @@
+Fixed the free-plan payload bug.
+
+What changed:
+- [user_payload.py](/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_003/project/user_payload.py): `role` is now omitted entirely for tenants whose `tenant_id` starts with `free_`, while other tenants still default to `"member"` when no role is provided.
+- [test_regression.py](/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_003/project/test_regression.py): added a unittest regression that asserts free-plan tenants do not include `role` in the payload.
+
+Verification:
+- `python -m unittest test_regression.py`
+- `python -m py_compile user_payload.py test_regression.py test_user_payload.py`
+- `python -m unittest`
+
+All passed.

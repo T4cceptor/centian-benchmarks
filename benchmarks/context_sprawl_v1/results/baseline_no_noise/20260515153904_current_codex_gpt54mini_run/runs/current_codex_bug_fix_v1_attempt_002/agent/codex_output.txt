@@ -1,0 +1,11 @@
+Implemented the fix for the free-plan payload bug.
+
+Changed:
+- [`user_payload.py`](./user_payload.py): `role` is now omitted entirely for tenants whose ID starts with `free_`; non-free tenants still default to `"member"` when no role is provided, and legacy email handling is unchanged.
+- [`test_regression.py`](./test_regression.py): added the new `unittest` regression that verifies free-plan tenants do not send `role`.
+
+Verified:
+- `python -m unittest test_regression.py`
+- `python -m py_compile user_payload.py test_regression.py`
+
+`test_user_payload.py` was left unchanged.

@@ -1,0 +1,11 @@
+Implemented the free-plan payload fix and added the regression.
+
+Changed:
+- [`test_regression.py`](file:///Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_001/project/test_regression.py) now asserts that `role` is omitted for `free_...` tenants.
+- [`user_payload.py`](file:///Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_001/project/user_payload.py) now skips `role` entirely for free-plan tenants while preserving the existing behavior for other tenants.
+
+Verification:
+- `python -m unittest test_regression.py`
+- `python -m py_compile user_payload.py test_regression.py`
+
+Both passed.

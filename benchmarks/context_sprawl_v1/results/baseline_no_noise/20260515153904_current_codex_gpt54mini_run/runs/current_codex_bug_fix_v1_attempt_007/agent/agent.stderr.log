@@ -1,0 +1,3 @@
+
+===== Demo run 2026-05-15T15:49:43+02:00 (codex) =====
+2026-05-15T13:50:20.907589Z ERROR codex_core::tools::router: error=patch rejected: writing is blocked by read-only sandbox; rejected by user approval settings

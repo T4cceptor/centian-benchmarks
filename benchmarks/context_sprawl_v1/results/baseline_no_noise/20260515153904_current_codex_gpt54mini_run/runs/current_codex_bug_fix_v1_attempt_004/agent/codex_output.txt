@@ -1,0 +1,11 @@
+Implemented the MyOrgAPI fix and verified it with the Centian TDD workflow.
+
+What changed:
+- [test_regression.py](/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_004/project/test_regression.py#L1) adds a standard-library `unittest` regression for `free_` tenants.
+- [user_payload.py](/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_004/project/user_payload.py#L4) now omits `role` entirely when `tenant_id` starts with `free_`, while keeping the legacy email-casing and metadata rules intact.
+
+Verification:
+- `python -m unittest test_regression.py`
+- `python -m py_compile user_payload.py test_regression.py`
+
+Both passed.

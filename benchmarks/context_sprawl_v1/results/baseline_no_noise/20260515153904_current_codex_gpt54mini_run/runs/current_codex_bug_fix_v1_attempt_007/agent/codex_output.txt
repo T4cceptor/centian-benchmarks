@@ -1,0 +1,17 @@
+Implemented via the Centian guided TDD workflow.
+
+What changed:
+- Added the regression in [test_regression.py](/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_007/project/test_regression.py) to assert that `free_...` tenants omit `user.role` even when a role is provided.
+- Fixed [user_payload.py](/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_007/project/user_payload.py) so `role` is only added for non-`free_` tenants.
+
+Behavior now:
+- `free_...` tenants: `role` is omitted entirely.
+- Other tenants: `role` still defaults to `"member"` if missing, or preserves the caller’s value.
+- Existing email, display name, and metadata rules remain unchanged.
+
+Validation:
+- `python -m unittest test_regression`
+- `python -m py_compile user_payload.py test_regression.py test_user_payload.py`
+- `python -m unittest`
+
+All passed.

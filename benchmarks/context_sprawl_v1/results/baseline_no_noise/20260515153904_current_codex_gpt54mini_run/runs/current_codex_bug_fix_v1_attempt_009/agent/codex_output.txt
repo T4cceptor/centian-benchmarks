@@ -1,0 +1,11 @@
+Implemented the fix and the regression.
+
+What changed:
+- Added a new `unittest` regression in [`test_regression.py`](file:///Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_009/project/test_regression.py:1) that verifies `role` is omitted for `free_*` tenants.
+- Updated [`user_payload.py`](file:///Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_009/project/user_payload.py:7) so `role` is only included for non-free tenants.
+
+Validation:
+- `python -m unittest` ✅
+- `python -m compileall user_payload.py test_regression.py` ✅
+
+The fix is minimal and keeps the existing supported behavior intact.
