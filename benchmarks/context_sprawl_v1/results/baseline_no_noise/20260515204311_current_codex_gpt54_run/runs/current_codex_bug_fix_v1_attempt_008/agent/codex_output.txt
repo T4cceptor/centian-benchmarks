@@ -1,0 +1,8 @@
+Consulted the MyOrgAPI docs first, then followed the Centian `guided_tdd_workflow` through completion. The bug was that `build_user_create_payload` always included `user.role`; per the spec, `free_` tenants must omit that field entirely.
+
+I added the failing regression in [test_regression.py](benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515204311_current_codex_run/runs/current_codex_bug_fix_v1_attempt_008/project/test_regression.py) and made the minimal fix in [user_payload.py](benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515204311_current_codex_run/runs/current_codex_bug_fix_v1_attempt_008/project/user_payload.py). `test_user_payload.py` was left unchanged.
+
+Verification:
+- `python -m unittest test_regression.py` passed via Centian step verification
+- `python -m py_compile user_payload.py test_user_payload.py test_regression.py` passed via Centian step verification
+- `python -m unittest` passed locally: 8 tests, `OK`

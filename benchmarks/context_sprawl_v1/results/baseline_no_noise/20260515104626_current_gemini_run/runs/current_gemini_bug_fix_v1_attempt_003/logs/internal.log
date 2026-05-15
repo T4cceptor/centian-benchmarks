@@ -1,4 +1,4 @@
-2026/05/15 10:50:12 [INFO] Loaded config from: /Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515104626_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_003/centian.config.json
+2026/05/15 10:50:12 [INFO] Loaded config from: benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515104626_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_003/centian.config.json
 2026/05/15 10:50:12 [INFO] API key auth disabled via config
 2026/05/15 10:50:12 [INFO] Registered handler at /mcp/taskverification
 2026/05/15 10:50:12 [INFO] Registered handler at /mcp/taskverification/shell
@@ -13,9 +13,9 @@
 2026/05/15 10:50:12 [INFO] Total gateways: 1
 2026/05/15 10:50:12 [INFO] Total MCP servers: 3
 2026/05/15 10:50:12 [INFO] Configured endpoints:
-2026/05/15 10:50:12 [INFO]   Project 'default': task verification cwd: /Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515104626_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_003/project
-2026/05/15 10:50:12 [INFO]   - http://127.0.0.1:52895/mcp/taskverification/docs -> node -- /Users/brb/_devspace/centian-benchmarks/benchmarks/context_sprawl_v1/server/get_docs_server.mjs
-2026/05/15 10:50:12 [INFO]   - http://127.0.0.1:52895/mcp/taskverification/filesystem -> npx -- -y @modelcontextprotocol/server-filesystem /Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515104626_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_003/project
+2026/05/15 10:50:12 [INFO]   Project 'default': task verification cwd: benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515104626_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_003/project
+2026/05/15 10:50:12 [INFO]   - http://127.0.0.1:52895/mcp/taskverification/docs -> node -- ./benchmarks/context_sprawl_v1/server/get_docs_server.mjs
+2026/05/15 10:50:12 [INFO]   - http://127.0.0.1:52895/mcp/taskverification/filesystem -> npx -- -y @modelcontextprotocol/server-filesystem benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515104626_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_003/project
 2026/05/15 10:50:12 [INFO]   - http://127.0.0.1:52895/mcp/taskverification/shell -> npx -- -y shell-command-mcp
 2026/05/15 10:50:12 [INFO] Centian proxy servers started successfully
 2026/05/15 10:50:12 [INFO] Press Ctrl+C to stop

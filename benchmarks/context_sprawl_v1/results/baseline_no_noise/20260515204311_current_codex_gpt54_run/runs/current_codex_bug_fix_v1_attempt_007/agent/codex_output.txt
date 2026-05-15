@@ -1,0 +1,5 @@
+Added the regression in [test_regression.py](benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515204311_current_codex_run/runs/current_codex_bug_fix_v1_attempt_007/project/test_regression.py) from the MyOrgAPI docs rule that `free_` tenants must omit `user.role` entirely, even when the caller provides one. It failed first with `AssertionError: 'role' unexpectedly found in ...`, which matched the bug report.
+
+The fix in [user_payload.py](benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515204311_current_codex_run/runs/current_codex_bug_fix_v1_attempt_007/project/user_payload.py) is minimal: build `user` without `role` by default, then add `role` only for non-free tenants, preserving the existing `"member"` default outside the free plan.
+
+Verification: `python -m unittest test_regression.py`, `python -m unittest`, and `python -m py_compile user_payload.py test_user_payload.py test_regression.py` all pass.

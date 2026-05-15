@@ -1,6 +1,6 @@
-Fixed the free-plan payload bug in [`user_payload.py`](/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_006/project/user_payload.py): `user.role` is now omitted entirely for `tenant_id` values starting with `free_`, while existing behavior for legacy email casing and archive metadata version stays intact.
+Fixed the free-plan payload bug in [`user_payload.py`](benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_006/project/user_payload.py): `user.role` is now omitted entirely for `tenant_id` values starting with `free_`, while existing behavior for legacy email casing and archive metadata version stays intact.
 
-Added the regression in [`test_regression.py`](/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_006/project/test_regression.py).
+Added the regression in [`test_regression.py`](benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_006/project/test_regression.py).
 
 Verified:
 - `python -m unittest test_regression.py test_user_payload.py`

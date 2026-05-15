@@ -1,0 +1,117 @@
+{
+  "suiteId": "context_sprawl_v1",
+  "suiteName": "Context Sprawl Benchmark Suite v1",
+  "templateId": "guided_tdd_workflow",
+  "templateName": "Guided TDD Workflow",
+  "suitePath": "./benchmarks/context_sprawl_v1",
+  "invocationDir": "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515165143_current_claude_run",
+  "outputRoot": "./.centian/benchmarks",
+  "startedAt": "2026-05-15T16:51:43.029988+02:00",
+  "endedAt": "2026-05-15T17:13:17.571668+02:00",
+  "status": "completed",
+  "repeat": 10,
+  "agents": [
+    "claude"
+  ],
+  "caseIds": [
+    "bug_fix_v1"
+  ],
+  "templateVariants": [
+    {
+      "name": "current",
+      "sourceDir": "./task-templates"
+    }
+  ],
+  "runs": [
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "claude",
+      "templateVariant": "current",
+      "attempt": 1,
+      "relativeRunDir": "runs/current_claude_bug_fix_v1_attempt_001",
+      "status": "completed"
+    },
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "claude",
+      "templateVariant": "current",
+      "attempt": 2,
+      "relativeRunDir": "runs/current_claude_bug_fix_v1_attempt_002",
+      "status": "completed"
+    },
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "claude",
+      "templateVariant": "current",
+      "attempt": 3,
+      "relativeRunDir": "runs/current_claude_bug_fix_v1_attempt_003",
+      "status": "completed"
+    },
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "claude",
+      "templateVariant": "current",
+      "attempt": 4,
+      "relativeRunDir": "runs/current_claude_bug_fix_v1_attempt_004",
+      "status": "completed"
+    },
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "claude",
+      "templateVariant": "current",
+      "attempt": 5,
+      "relativeRunDir": "runs/current_claude_bug_fix_v1_attempt_005",
+      "status": "completed"
+    },
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "claude",
+      "templateVariant": "current",
+      "attempt": 6,
+      "relativeRunDir": "runs/current_claude_bug_fix_v1_attempt_006",
+      "status": "completed"
+    },
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "claude",
+      "templateVariant": "current",
+      "attempt": 7,
+      "relativeRunDir": "runs/current_claude_bug_fix_v1_attempt_007",
+      "status": "completed"
+    },
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "claude",
+      "templateVariant": "current",
+      "attempt": 8,
+      "relativeRunDir": "runs/current_claude_bug_fix_v1_attempt_008",
+      "status": "completed"
+    },
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "claude",
+      "templateVariant": "current",
+      "attempt": 9,
+      "relativeRunDir": "runs/current_claude_bug_fix_v1_attempt_009",
+      "status": "completed"
+    },
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "claude",
+      "templateVariant": "current",
+      "attempt": 10,
+      "relativeRunDir": "runs/current_claude_bug_fix_v1_attempt_010",
+      "status": "completed"
+    }
+  ]
+}

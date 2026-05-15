@@ -1,8 +1,8 @@
 Implemented the MyOrgAPI free-plan fix with TDD.
 
 Changed:
-- [test_regression.py](/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_010/project/test_regression.py)
-- [user_payload.py](/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_010/project/user_payload.py)
+- [test_regression.py](benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_010/project/test_regression.py)
+- [user_payload.py](benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_010/project/user_payload.py)
 
 What changed:
 - Added a new `unittest` regression for `free_` tenants asserting `user.role` is omitted even when provided.

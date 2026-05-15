@@ -1,0 +1,34 @@
+{
+  "suiteId": "context_sprawl_v1",
+  "suiteName": "Context Sprawl Benchmark Suite v1",
+  "caseId": "bug_fix_v1",
+  "caseName": "MyOrgAPI payload bug fix",
+  "templateId": "guided_tdd_workflow",
+  "templateName": "Guided TDD Workflow",
+  "templateVariant": {
+    "name": "current",
+    "sourceDir": "./task-templates"
+  },
+  "agentId": "claude",
+  "attempt": 8,
+  "selectedModel": "opus",
+  "startedAt": "2026-05-15T17:06:18.75494+02:00",
+  "endedAt": "2026-05-15T17:08:13.55225+02:00",
+  "status": "completed",
+  "uiPublicUrl": "http://127.0.0.1:58551/ui/tasks",
+  "centianPid": 79061,
+  "linkedTaskRunIds": [
+    "tr_1778857584258_lereck5vb4"
+  ],
+  "artifactPaths": {
+    "runDir": "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515165143_current_claude_run/runs/current_claude_bug_fix_v1_attempt_008",
+    "projectDir": "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515165143_current_claude_run/runs/current_claude_bug_fix_v1_attempt_008/project",
+    "logsDir": "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515165143_current_claude_run/runs/current_claude_bug_fix_v1_attempt_008/logs",
+    "agentDir": "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515165143_current_claude_run/runs/current_claude_bug_fix_v1_attempt_008/agent",
+    "configPath": "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515165143_current_claude_run/runs/current_claude_bug_fix_v1_attempt_008/centian.config.json",
+    "eventStoreMode": "configured_shared",
+    "eventStorePath": "./benchmarks/context_sprawl_v1/results/context_sprawl_v1.sqlite",
+    "requestLogPath": "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515165143_current_claude_run/runs/current_claude_bug_fix_v1_attempt_008/logs/requests_2026-05-15.jsonl",
+    "selectedTemplatePath": "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515165143_current_claude_run/runs/current_claude_bug_fix_v1_attempt_008/selected-template.yaml"
+  }
+}

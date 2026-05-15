@@ -1,0 +1,3 @@
+Added the regression in [test_regression.py](benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515204311_current_codex_run/runs/current_codex_bug_fix_v1_attempt_006/project/test_regression.py) for the documented free-plan rule, then fixed [user_payload.py](benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515204311_current_codex_run/runs/current_codex_bug_fix_v1_attempt_006/project/user_payload.py) so tenants with IDs starting `free_` omit `user.role` entirely. Non-free tenants still keep the existing default/passthrough behavior.
+
+Verification passed with `python -m unittest test_regression.py`, `python -m py_compile user_payload.py test_regression.py test_user_payload.py`, and the full suite via `python -m unittest` (`8` tests, all passing).

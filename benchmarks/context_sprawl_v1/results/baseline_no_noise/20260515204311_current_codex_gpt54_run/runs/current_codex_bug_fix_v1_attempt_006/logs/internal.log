@@ -1,0 +1,59 @@
+2026/05/15 20:51:59 [INFO] Loaded config from: benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515204311_current_codex_run/runs/current_codex_bug_fix_v1_attempt_006/centian.config.json
+2026/05/15 20:51:59 [INFO] API key auth disabled via config
+2026/05/15 20:51:59 [INFO] Registered handler at /mcp/taskverification
+2026/05/15 20:51:59 [INFO] Registered handler at /mcp/taskverification/shell
+2026/05/15 20:51:59 [INFO] Registered handler at /mcp/taskverification/docs
+2026/05/15 20:51:59 [INFO] Registered handler at /mcp/taskverification/filesystem
+2026/05/15 20:51:59 [INFO] Context Sprawl v1
+2026/05/15 20:51:59 [INFO] Starting HTTP proxy server
+2026/05/15 20:51:59 [INFO] Host: 127.0.0.1
+2026/05/15 20:51:59 [INFO] Port: 60370
+2026/05/15 20:51:59 [INFO] Timeout: 30s
+2026/05/15 20:51:59 [INFO] Projects: 1
+2026/05/15 20:51:59 [INFO] Total gateways: 1
+2026/05/15 20:51:59 [INFO] Total MCP servers: 3
+2026/05/15 20:51:59 [INFO] Configured endpoints:
+2026/05/15 20:51:59 [INFO]   Project 'default': task verification cwd: benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515204311_current_codex_run/runs/current_codex_bug_fix_v1_attempt_006/project
+2026/05/15 20:51:59 [INFO]   - http://127.0.0.1:60370/mcp/taskverification/shell -> npx -- -y shell-command-mcp
+2026/05/15 20:51:59 [INFO]   - http://127.0.0.1:60370/mcp/taskverification/docs -> node -- ./benchmarks/context_sprawl_v1/server/get_docs_server.mjs
+2026/05/15 20:51:59 [INFO]   - http://127.0.0.1:60370/mcp/taskverification/filesystem -> npx -- -y @modelcontextprotocol/server-filesystem benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515204311_current_codex_run/runs/current_codex_bug_fix_v1_attempt_006/project
+2026/05/15 20:51:59 [INFO] Centian proxy servers started successfully
+2026/05/15 20:51:59 [INFO] Press Ctrl+C to stop
+2026/05/15 20:52:00 [DEBUG] Received request: POST - /mcp/taskverification - 
+2026/05/15 20:52:00 [DEBUG] Received headers: http.Header{"Accept":[]string{"text/event-stream, application/json"}, "Content-Length":[]string{"199"}, "Content-Type":[]string{"application/json"}}
+2026/05/15 20:52:00 [DEBUG] Received request body (199 bytes): {"jsonrpc":"2.0","id":0,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{"elicitation":{}},"clientInfo":{"name":"codex-mcp-client","title":"Codex","version":"0.130.0"}}}
+2026/05/15 20:52:00 [INFO] ProxyEndpoint[taskverification]: getting server for session sid_1778871120263_4m6pa56sk8
+2026/05/15 20:52:00 [WARN] ProxyEndpoint[taskverification]: resource discovery failed for docs: calling "resources/list": Method not found: resources/list
+2026/05/15 20:52:00 [WARN] ProxyEndpoint[taskverification]: resource template discovery failed for docs: calling "resources/templates/list": Method not found: resources/templates/list
+2026/05/15 20:52:00 [WARN] ProxyEndpoint[taskverification]: prompt discovery failed for docs: calling "prompts/list": Method not found: prompts/list
+2026/05/15 20:52:01 [WARN] ProxyEndpoint[taskverification]: resource discovery failed for shell: calling "resources/list": Method not found
+2026/05/15 20:52:01 [WARN] ProxyEndpoint[taskverification]: resource template discovery failed for shell: calling "resources/templates/list": Method not found
+2026/05/15 20:52:01 [WARN] ProxyEndpoint[taskverification]: prompt discovery failed for shell: calling "prompts/list": Method not found
+2026/05/15 20:52:01 [WARN] ProxyEndpoint[taskverification]: resource discovery failed for filesystem: calling "resources/list": Method not found
+2026/05/15 20:52:01 [WARN] ProxyEndpoint[taskverification]: resource template discovery failed for filesystem: calling "resources/templates/list": Method not found
+2026/05/15 20:52:01 [WARN] ProxyEndpoint[taskverification]: prompt discovery failed for filesystem: calling "prompts/list": Method not found
+2026/05/15 20:52:01 [INFO] ProxyEndpoint[taskverification]: connected pooled downstream docs with 1 tools, 0 resources, 0 resource templates, 0 prompts
+2026/05/15 20:52:01 [INFO] ProxyEndpoint[taskverification]: connected pooled downstream shell with 1 tools, 0 resources, 0 resource templates, 0 prompts
+2026/05/15 20:52:01 [INFO] ProxyEndpoint[taskverification]: upstream session sid_1778871120263_4m6pa56sk8 using pooled downstream session /mcp/taskverification|local:shared|forwarded-auth:none|aa348277b3fcdf85|74234e98afe7498f with 1/3 connected servers
+2026/05/15 20:52:01 [INFO] ProxyEndpoint[taskverification]: connected pooled downstream filesystem with 14 tools, 0 resources, 0 resource templates, 0 prompts
+2026/05/15 20:52:01 [INFO] ProxyEndpoint[taskverification]: upstream session sid_1778871120263_4m6pa56sk8 using pooled downstream session /mcp/taskverification|local:shared|forwarded-auth:none|aa348277b3fcdf85|74234e98afe7498f with 3/3 connected servers
+2026/05/15 20:52:20 [INFO] ProxyEndpoint[taskverification]: upstream session sid_1778871120263_4m6pa56sk8 using pooled downstream session /mcp/taskverification|local:shared|forwarded-auth:none|aa348277b3fcdf85|74234e98afe7498f with 3/3 connected servers
+2026/05/15 20:52:20 [INFO] Tool called: docs :: get_docs
+2026/05/15 20:52:20 [INFO] ProxyEndpoint[taskverification]: upstream session sid_1778871120263_4m6pa56sk8 using pooled downstream session /mcp/taskverification|local:shared|forwarded-auth:none|aa348277b3fcdf85|74234e98afe7498f with 3/3 connected servers
+2026/05/15 20:52:20 [INFO] Tool called: filesystem :: read_multiple_files
+2026/05/15 20:52:45 [INFO] ProxyEndpoint[taskverification]: upstream session sid_1778871120263_4m6pa56sk8 using pooled downstream session /mcp/taskverification|local:shared|forwarded-auth:none|aa348277b3fcdf85|74234e98afe7498f with 3/3 connected servers
+2026/05/15 20:52:45 [INFO] Tool called: filesystem :: write_file
+2026/05/15 20:52:54 [INFO] ProxyEndpoint[taskverification]: upstream session sid_1778871120263_4m6pa56sk8 using pooled downstream session /mcp/taskverification|local:shared|forwarded-auth:none|aa348277b3fcdf85|74234e98afe7498f with 3/3 connected servers
+2026/05/15 20:52:54 [INFO] Tool called: filesystem :: write_file
+2026/05/15 20:53:00 [INFO] ProxyEndpoint[taskverification]: upstream session sid_1778871120263_4m6pa56sk8 using pooled downstream session /mcp/taskverification|local:shared|forwarded-auth:none|aa348277b3fcdf85|74234e98afe7498f with 3/3 connected servers
+2026/05/15 20:53:00 [INFO] Tool called: shell :: execute_command
+2026/05/15 20:53:13 [INFO] ProxyEndpoint[taskverification]: upstream session sid_1778871120263_4m6pa56sk8 using pooled downstream session /mcp/taskverification|local:shared|forwarded-auth:none|aa348277b3fcdf85|74234e98afe7498f with 3/3 connected servers
+2026/05/15 20:53:13 [INFO] Tool called: filesystem :: edit_file
+2026/05/15 20:53:19 [INFO] ProxyEndpoint[taskverification]: upstream session sid_1778871120263_4m6pa56sk8 using pooled downstream session /mcp/taskverification|local:shared|forwarded-auth:none|aa348277b3fcdf85|74234e98afe7498f with 3/3 connected servers
+2026/05/15 20:53:19 [INFO] Tool called: shell :: execute_command
+2026/05/15 20:53:19 [INFO] ProxyEndpoint[taskverification]: upstream session sid_1778871120263_4m6pa56sk8 using pooled downstream session /mcp/taskverification|local:shared|forwarded-auth:none|aa348277b3fcdf85|74234e98afe7498f with 3/3 connected servers
+2026/05/15 20:53:19 [INFO] Tool called: shell :: execute_command
+2026/05/15 20:53:19 [INFO] ProxyEndpoint[taskverification]: upstream session sid_1778871120263_4m6pa56sk8 using pooled downstream session /mcp/taskverification|local:shared|forwarded-auth:none|aa348277b3fcdf85|74234e98afe7498f with 3/3 connected servers
+2026/05/15 20:53:19 [INFO] Tool called: shell :: execute_command
+2026/05/15 20:53:26 [INFO] Centian received shutdown signal, stopping server...
+2026/05/15 20:53:26 [INFO] Centian server stopped successfully

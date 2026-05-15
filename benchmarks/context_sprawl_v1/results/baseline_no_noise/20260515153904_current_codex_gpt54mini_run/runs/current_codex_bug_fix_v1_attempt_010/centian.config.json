@@ -6,7 +6,7 @@
     "port": "57559",
     "logLevel": "debug",
     "logOutput": "file",
-    "logFile": "/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_010/logs/internal.log",
+    "logFile": "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_010/logs/internal.log",
     "timeout": 30
   },
   "projects": {
@@ -16,12 +16,12 @@
       "capabilities": {
         "taskVerification": {
           "enabled": true,
-          "templatesPath": "/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_010/.runtime/templates"
+          "templatesPath": "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_010/.runtime/templates"
         },
         "eventStorage": {
           "enabled": true,
           "driver": "sqlite",
-          "path": "/Users/brb/_devspace/centian-benchmarks/benchmarks/context_sprawl_v1/results/context_sprawl_v1.sqlite"
+          "path": "./benchmarks/context_sprawl_v1/results/context_sprawl_v1.sqlite"
         },
         "ui": {
           "enabled": true
@@ -38,7 +38,7 @@
               "name": "",
               "command": "node",
               "args": [
-                "/Users/brb/_devspace/centian-benchmarks/benchmarks/context_sprawl_v1/server/get_docs_server.mjs"
+                "./benchmarks/context_sprawl_v1/server/get_docs_server.mjs"
               ],
               "env": {
                 "CONTEXT_SPRAW_PROFILE": "baseline"
@@ -52,7 +52,7 @@
               "args": [
                 "-y",
                 "@modelcontextprotocol/server-filesystem",
-                "/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_010/project"
+                "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_010/project"
               ],
               "enabled": true,
               "description": "Filesystem access to the context-sprawl workspace."

@@ -1,8 +1,8 @@
 Implemented the free-plan payload fix and validated it through Centian-guided TDD.
 
 What changed:
-- Added a new regression in [test_regression.py](/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_005/project/test_regression.py) covering `free_` tenants.
-- Updated [user_payload.py](/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_005/project/user_payload.py) so `user.role` is omitted entirely for `tenant_id` values starting with `free_`.
+- Added a new regression in [test_regression.py](benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_005/project/test_regression.py) covering `free_` tenants.
+- Updated [user_payload.py](benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_005/project/user_payload.py) so `user.role` is omitted entirely for `tenant_id` values starting with `free_`.
 
 Behavior now:
 - `free_...` tenants: no `role` key is sent.

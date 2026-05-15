@@ -1,0 +1,5 @@
+Retrieved the MyOrgAPI spec from Centian docs first, then followed the guided TDD workflow to add the failing regression in [test_regression.py](benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515204311_current_codex_run/runs/current_codex_bug_fix_v1_attempt_010/project/test_regression.py). The regression asserts that `free_` tenants omit `user.role` entirely, which matches the documented `/users` contract.
+
+The fix in [user_payload.py](benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515204311_current_codex_run/runs/current_codex_bug_fix_v1_attempt_010/project/user_payload.py) is minimal: the payload builder now adds `role` only for non-free tenants, preserving the existing `"member"` default everywhere else. `test_user_payload.py` was left unchanged.
+
+Verification: `python -m unittest` passed with 8 tests total, and the Centian task completed successfully.

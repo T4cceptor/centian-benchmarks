@@ -3,9 +3,9 @@
   "suiteName": "Context Sprawl Benchmark Suite v1",
   "templateId": "guided_tdd_workflow",
   "templateName": "Guided TDD Workflow",
-  "suitePath": "/Users/brb/_devspace/centian-benchmarks/benchmarks/context_sprawl_v1",
-  "invocationDir": "/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515094728_current_gemini_run",
-  "outputRoot": "/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks",
+  "suitePath": "./benchmarks/context_sprawl_v1",
+  "invocationDir": "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515094728_current_gemini_run",
+  "outputRoot": "./.centian/benchmarks",
   "startedAt": "2026-05-15T09:47:28.139462+02:00",
   "endedAt": "2026-05-15T10:05:03.025507+02:00",
   "status": "completed",
@@ -19,7 +19,7 @@
   "templateVariants": [
     {
       "name": "current",
-      "sourceDir": "/Users/brb/_devspace/centian-benchmarks/task-templates"
+      "sourceDir": "./task-templates"
     }
   ],
   "runs": [

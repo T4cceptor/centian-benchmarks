@@ -7,7 +7,7 @@
   "templateName": "Guided TDD Workflow",
   "templateVariant": {
     "name": "current",
-    "sourceDir": "/Users/brb/_devspace/centian-benchmarks/task-templates"
+    "sourceDir": "./task-templates"
   },
   "agentId": "gemini",
   "attempt": 10,
@@ -21,14 +21,14 @@
     "tr_1778832210752_ic8jpuytdu"
   ],
   "artifactPaths": {
-    "runDir": "/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515094728_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_010",
-    "projectDir": "/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515094728_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_010/project",
-    "logsDir": "/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515094728_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_010/logs",
-    "agentDir": "/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515094728_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_010/agent",
-    "configPath": "/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515094728_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_010/centian.config.json",
+    "runDir": "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515094728_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_010",
+    "projectDir": "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515094728_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_010/project",
+    "logsDir": "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515094728_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_010/logs",
+    "agentDir": "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515094728_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_010/agent",
+    "configPath": "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515094728_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_010/centian.config.json",
     "eventStoreMode": "configured_shared",
-    "eventStorePath": "/Users/brb/_devspace/centian-benchmarks/benchmarks/context_sprawl_v1/results/context_sprawl_v1.sqlite",
-    "requestLogPath": "/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515094728_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_010/logs/requests_2026-05-15.jsonl",
-    "selectedTemplatePath": "/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515094728_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_010/selected-template.yaml"
+    "eventStorePath": "./benchmarks/context_sprawl_v1/results/context_sprawl_v1.sqlite",
+    "requestLogPath": "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515094728_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_010/logs/requests_2026-05-15.jsonl",
+    "selectedTemplatePath": "benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515094728_current_gemini_run/runs/current_gemini_bug_fix_v1_attempt_010/selected-template.yaml"
   }
 }

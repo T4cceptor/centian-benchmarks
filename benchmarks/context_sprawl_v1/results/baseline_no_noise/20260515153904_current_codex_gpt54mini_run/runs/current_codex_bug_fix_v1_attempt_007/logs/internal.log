@@ -1,4 +1,4 @@
-2026/05/15 15:49:43 [INFO] Loaded config from: /Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_007/centian.config.json
+2026/05/15 15:49:43 [INFO] Loaded config from: benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_007/centian.config.json
 2026/05/15 15:49:43 [INFO] API key auth disabled via config
 2026/05/15 15:49:43 [INFO] Registered handler at /mcp/taskverification
 2026/05/15 15:49:43 [INFO] Registered handler at /mcp/taskverification/docs
@@ -13,10 +13,10 @@
 2026/05/15 15:49:43 [INFO] Total gateways: 1
 2026/05/15 15:49:43 [INFO] Total MCP servers: 3
 2026/05/15 15:49:43 [INFO] Configured endpoints:
-2026/05/15 15:49:43 [INFO]   Project 'default': task verification cwd: /Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_007/project
-2026/05/15 15:49:43 [INFO]   - http://127.0.0.1:57256/mcp/taskverification/filesystem -> npx -- -y @modelcontextprotocol/server-filesystem /Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_007/project
+2026/05/15 15:49:43 [INFO]   Project 'default': task verification cwd: benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_007/project
+2026/05/15 15:49:43 [INFO]   - http://127.0.0.1:57256/mcp/taskverification/filesystem -> npx -- -y @modelcontextprotocol/server-filesystem benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_007/project
 2026/05/15 15:49:43 [INFO]   - http://127.0.0.1:57256/mcp/taskverification/shell -> npx -- -y shell-command-mcp
-2026/05/15 15:49:43 [INFO]   - http://127.0.0.1:57256/mcp/taskverification/docs -> node -- /Users/brb/_devspace/centian-benchmarks/benchmarks/context_sprawl_v1/server/get_docs_server.mjs
+2026/05/15 15:49:43 [INFO]   - http://127.0.0.1:57256/mcp/taskverification/docs -> node -- ./benchmarks/context_sprawl_v1/server/get_docs_server.mjs
 2026/05/15 15:49:43 [INFO] Centian proxy servers started successfully
 2026/05/15 15:49:43 [INFO] Press Ctrl+C to stop
 2026/05/15 15:49:43 [DEBUG] Received request: POST - /mcp/taskverification - 

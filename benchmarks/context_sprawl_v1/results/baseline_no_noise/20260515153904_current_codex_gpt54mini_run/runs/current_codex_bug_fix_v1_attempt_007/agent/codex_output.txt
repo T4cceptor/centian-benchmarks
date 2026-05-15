@@ -1,8 +1,8 @@
 Implemented via the Centian guided TDD workflow.
 
 What changed:
-- Added the regression in [test_regression.py](/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_007/project/test_regression.py) to assert that `free_...` tenants omit `user.role` even when a role is provided.
-- Fixed [user_payload.py](/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_007/project/user_payload.py) so `role` is only added for non-`free_` tenants.
+- Added the regression in [test_regression.py](benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_007/project/test_regression.py) to assert that `free_...` tenants omit `user.role` even when a role is provided.
+- Fixed [user_payload.py](benchmarks/context_sprawl_v1/results/baseline_no_noise/20260515153904_current_codex_run/runs/current_codex_bug_fix_v1_attempt_007/project/user_payload.py) so `role` is only added for non-`free_` tenants.
 
 Behavior now:
 - `free_...` tenants: `role` is omitted entirely.
