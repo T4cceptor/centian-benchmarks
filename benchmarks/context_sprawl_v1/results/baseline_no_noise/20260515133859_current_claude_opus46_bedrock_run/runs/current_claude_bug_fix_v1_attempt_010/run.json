@@ -1,0 +1,34 @@
+{
+  "suiteId": "context_sprawl_v1",
+  "suiteName": "Context Sprawl Benchmark Suite v1",
+  "caseId": "bug_fix_v1",
+  "caseName": "MyOrgAPI payload bug fix",
+  "templateId": "guided_tdd_workflow",
+  "templateName": "Guided TDD Workflow",
+  "templateVariant": {
+    "name": "current",
+    "sourceDir": "/Users/brb/projects/centian-benchmarks/task-templates"
+  },
+  "agentId": "claude",
+  "attempt": 10,
+  "selectedModel": "opus",
+  "startedAt": "2026-05-15T13:57:56.085329+02:00",
+  "endedAt": "2026-05-15T14:00:37.408247+02:00",
+  "status": "completed",
+  "uiPublicUrl": "http://127.0.0.1:60665/ui/tasks",
+  "centianPid": 42994,
+  "linkedTaskRunIds": [
+    "tr_1778846282243_2stj893kjw"
+  ],
+  "artifactPaths": {
+    "runDir": "/Users/brb/projects/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515133859_current_claude_run/runs/current_claude_bug_fix_v1_attempt_010",
+    "projectDir": "/Users/brb/projects/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515133859_current_claude_run/runs/current_claude_bug_fix_v1_attempt_010/project",
+    "logsDir": "/Users/brb/projects/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515133859_current_claude_run/runs/current_claude_bug_fix_v1_attempt_010/logs",
+    "agentDir": "/Users/brb/projects/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515133859_current_claude_run/runs/current_claude_bug_fix_v1_attempt_010/agent",
+    "configPath": "/Users/brb/projects/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515133859_current_claude_run/runs/current_claude_bug_fix_v1_attempt_010/centian.config.json",
+    "eventStoreMode": "configured_shared",
+    "eventStorePath": "/Users/brb/projects/centian-benchmarks/benchmarks/context_sprawl_v1/results/context_sprawl_v1.sqlite",
+    "requestLogPath": "/Users/brb/projects/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515133859_current_claude_run/runs/current_claude_bug_fix_v1_attempt_010/logs/requests_2026-05-15.jsonl",
+    "selectedTemplatePath": "/Users/brb/projects/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515133859_current_claude_run/runs/current_claude_bug_fix_v1_attempt_010/selected-template.yaml"
+  }
+}
