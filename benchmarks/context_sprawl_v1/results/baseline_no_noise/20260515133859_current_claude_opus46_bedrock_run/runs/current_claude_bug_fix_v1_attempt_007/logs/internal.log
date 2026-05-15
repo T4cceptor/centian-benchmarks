@@ -1,0 +1,63 @@
+2026/05/15 13:50:35 [INFO] Loaded config from: /Users/brb/projects/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515133859_current_claude_run/runs/current_claude_bug_fix_v1_attempt_007/centian.config.json
+2026/05/15 13:50:35 [INFO] API key auth disabled via config
+2026/05/15 13:50:35 [INFO] Registered handler at /mcp/taskverification
+2026/05/15 13:50:35 [INFO] Registered handler at /mcp/taskverification/docs
+2026/05/15 13:50:35 [INFO] Registered handler at /mcp/taskverification/filesystem
+2026/05/15 13:50:35 [INFO] Registered handler at /mcp/taskverification/shell
+2026/05/15 13:50:35 [INFO] Context Sprawl v1
+2026/05/15 13:50:35 [INFO] Starting HTTP proxy server
+2026/05/15 13:50:35 [INFO] Host: 127.0.0.1
+2026/05/15 13:50:35 [INFO] Port: 60417
+2026/05/15 13:50:35 [INFO] Timeout: 30s
+2026/05/15 13:50:35 [INFO] Projects: 1
+2026/05/15 13:50:35 [INFO] Total gateways: 1
+2026/05/15 13:50:35 [INFO] Total MCP servers: 3
+2026/05/15 13:50:35 [INFO] Configured endpoints:
+2026/05/15 13:50:35 [INFO]   Project 'default': task verification cwd: /Users/brb/projects/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515133859_current_claude_run/runs/current_claude_bug_fix_v1_attempt_007/project
+2026/05/15 13:50:35 [INFO]   - http://127.0.0.1:60417/mcp/taskverification/docs -> node -- /Users/brb/projects/centian-benchmarks/benchmarks/context_sprawl_v1/server/get_docs_server.mjs
+2026/05/15 13:50:35 [INFO]   - http://127.0.0.1:60417/mcp/taskverification/filesystem -> npx -- -y @modelcontextprotocol/server-filesystem /Users/brb/projects/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515133859_current_claude_run/runs/current_claude_bug_fix_v1_attempt_007/project
+2026/05/15 13:50:35 [INFO]   - http://127.0.0.1:60417/mcp/taskverification/shell -> npx -- -y shell-command-mcp
+2026/05/15 13:50:35 [INFO] Centian proxy servers started successfully
+2026/05/15 13:50:35 [INFO] Press Ctrl+C to stop
+2026/05/15 13:50:36 [DEBUG] Received request: POST - /mcp/taskverification - claude-code/2.1.142 (sdk-cli)
+2026/05/15 13:50:36 [DEBUG] Received headers: http.Header{"Accept":[]string{"application/json, text/event-stream"}, "Accept-Encoding":[]string{"identity"}, "Connection":[]string{"keep-alive"}, "Content-Length":[]string{"305"}, "Content-Type":[]string{"application/json"}, "User-Agent":[]string{"claude-code/2.1.142 (sdk-cli)"}}
+2026/05/15 13:50:36 [DEBUG] Received request body (305 bytes): {"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{"roots":{},"elicitation":{}},"clientInfo":{"name":"claude-code","title":"Claude Code","version":"2.1.142","description":"Anthropic's agentic coding tool","websiteUrl":"https://claude.com/claude-code"}},"jsonrpc":"2.0","id":0}
+2026/05/15 13:50:36 [INFO] ProxyEndpoint[taskverification]: getting server for session sid_1778845836120_p3kb1ekb2s
+2026/05/15 13:50:36 [DEBUG] ProxyEndpoint[taskverification]: failed to refresh roots for session sid_1778845836120_p3kb1ekb2s: calling "roots/list": rejected by transport: undelivered message: stream not connected or already closed
+2026/05/15 13:50:36 [WARN] ProxyEndpoint[taskverification]: resource discovery failed for docs: calling "resources/list": Method not found: resources/list
+2026/05/15 13:50:36 [WARN] ProxyEndpoint[taskverification]: resource template discovery failed for docs: calling "resources/templates/list": Method not found: resources/templates/list
+2026/05/15 13:50:36 [WARN] ProxyEndpoint[taskverification]: prompt discovery failed for docs: calling "prompts/list": Method not found: prompts/list
+2026/05/15 13:50:36 [WARN] ProxyEndpoint[taskverification]: resource discovery failed for filesystem: calling "resources/list": Method not found
+2026/05/15 13:50:36 [WARN] ProxyEndpoint[taskverification]: resource template discovery failed for filesystem: calling "resources/templates/list": Method not found
+2026/05/15 13:50:36 [WARN] ProxyEndpoint[taskverification]: prompt discovery failed for filesystem: calling "prompts/list": Method not found
+2026/05/15 13:50:37 [WARN] ProxyEndpoint[taskverification]: resource discovery failed for shell: calling "resources/list": Method not found
+2026/05/15 13:50:37 [WARN] ProxyEndpoint[taskverification]: resource template discovery failed for shell: calling "resources/templates/list": Method not found
+2026/05/15 13:50:37 [WARN] ProxyEndpoint[taskverification]: prompt discovery failed for shell: calling "prompts/list": Method not found
+2026/05/15 13:50:37 [INFO] ProxyEndpoint[taskverification]: connected pooled downstream docs with 1 tools, 0 resources, 0 resource templates, 0 prompts
+2026/05/15 13:50:37 [INFO] ProxyEndpoint[taskverification]: connected pooled downstream shell with 1 tools, 0 resources, 0 resource templates, 0 prompts
+2026/05/15 13:50:37 [INFO] ProxyEndpoint[taskverification]: upstream session sid_1778845836120_p3kb1ekb2s using pooled downstream session /mcp/taskverification|local:shared|forwarded-auth:none|aa348277b3fcdf85|74234e98afe7498f with 1/3 connected servers
+2026/05/15 13:50:37 [INFO] ProxyEndpoint[taskverification]: connected pooled downstream filesystem with 14 tools, 0 resources, 0 resource templates, 0 prompts
+2026/05/15 13:50:37 [INFO] ProxyEndpoint[taskverification]: upstream session sid_1778845836120_p3kb1ekb2s using pooled downstream session /mcp/taskverification|local:shared|forwarded-auth:none|aa348277b3fcdf85|6fe026c5d7e6dd5d with 3/3 connected servers
+2026/05/15 13:50:44 [INFO] Tool called: filesystem :: list_directory
+2026/05/15 13:50:44 [INFO] Tool called: docs :: get_docs
+2026/05/15 13:50:48 [INFO] Tool called: filesystem :: read_multiple_files
+2026/05/15 13:51:13 [INFO] Tool called: filesystem :: write_file
+2026/05/15 13:51:29 [INFO] Tool called: filesystem :: write_file
+2026/05/15 13:51:36 [INFO] Tool called: filesystem :: write_file
+2026/05/15 13:51:46 [INFO] Tool called: shell :: execute_command
+2026/05/15 13:51:50 [INFO] Tool called: shell :: execute_command
+2026/05/15 13:51:53 [INFO] Tool called: shell :: execute_command
+2026/05/15 13:51:57 [INFO] Tool called: shell :: execute_command
+2026/05/15 13:52:00 [INFO] Tool called: shell :: execute_command
+2026/05/15 13:52:02 [INFO] Tool called: shell :: execute_command
+2026/05/15 13:52:07 [INFO] Tool called: filesystem :: read_text_file
+2026/05/15 13:52:13 [INFO] Tool called: shell :: execute_command
+2026/05/15 13:52:16 [INFO] Tool called: shell :: execute_command
+2026/05/15 13:52:22 [INFO] Tool called: shell :: execute_command
+2026/05/15 13:52:25 [INFO] Tool called: filesystem :: read_text_file
+2026/05/15 13:52:30 [INFO] Tool called: shell :: execute_command
+2026/05/15 13:52:33 [INFO] Tool called: filesystem :: read_text_file
+2026/05/15 13:52:55 [INFO] Tool called: filesystem :: edit_file
+2026/05/15 13:52:59 [INFO] Tool called: filesystem :: edit_file
+2026/05/15 13:53:09 [INFO] Centian received shutdown signal, stopping server...
+2026/05/15 13:53:09 [INFO] Centian server stopped successfully
