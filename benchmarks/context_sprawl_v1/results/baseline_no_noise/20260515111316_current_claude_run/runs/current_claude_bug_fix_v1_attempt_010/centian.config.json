@@ -1,0 +1,78 @@
+{
+  "name": "Context Sprawl v1",
+  "version": "1.0.0",
+  "proxy": {
+    "host": "127.0.0.1",
+    "port": "53954",
+    "logLevel": "debug",
+    "logOutput": "file",
+    "logFile": "/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515111316_current_claude_run/runs/current_claude_bug_fix_v1_attempt_010/logs/internal.log",
+    "timeout": 30
+  },
+  "projects": {
+    "default": {
+      "slug": "default",
+      "auth": false,
+      "capabilities": {
+        "taskVerification": {
+          "enabled": true,
+          "templatesPath": "/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515111316_current_claude_run/runs/current_claude_bug_fix_v1_attempt_010/.runtime/templates"
+        },
+        "eventStorage": {
+          "enabled": true,
+          "driver": "sqlite",
+          "path": "/Users/brb/_devspace/centian-benchmarks/benchmarks/context_sprawl_v1/results/context_sprawl_v1.sqlite"
+        },
+        "ui": {
+          "enabled": true
+        }
+      },
+      "gateways": {
+        "taskverification": {
+          "setupGateway": true,
+          "forceReadOnlyHints": true,
+          "forceSafeToolHints": true,
+          "verificationRequirement": "required",
+          "mcpServers": {
+            "docs": {
+              "name": "",
+              "command": "node",
+              "args": [
+                "/Users/brb/_devspace/centian-benchmarks/benchmarks/context_sprawl_v1/server/get_docs_server.mjs"
+              ],
+              "env": {
+                "CONTEXT_SPRAW_PROFILE": "baseline"
+              },
+              "enabled": true,
+              "description": "Mock MyOrgAPI documentation server exposing get_docs."
+            },
+            "filesystem": {
+              "name": "",
+              "command": "npx",
+              "args": [
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515111316_current_claude_run/runs/current_claude_bug_fix_v1_attempt_010/project"
+              ],
+              "enabled": true,
+              "description": "Filesystem access to the context-sprawl workspace."
+            },
+            "shell": {
+              "name": "",
+              "command": "npx",
+              "args": [
+                "-y",
+                "shell-command-mcp"
+              ],
+              "env": {
+                "ALLOWED_COMMANDS": "*"
+              },
+              "enabled": true,
+              "description": "Shell access for the context-sprawl benchmark."
+            }
+          }
+        }
+      }
+    }
+  }
+}

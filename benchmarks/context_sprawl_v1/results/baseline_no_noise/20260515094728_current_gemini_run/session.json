@@ -1,0 +1,117 @@
+{
+  "suiteId": "context_sprawl_v1",
+  "suiteName": "Context Sprawl Benchmark Suite v1",
+  "templateId": "guided_tdd_workflow",
+  "templateName": "Guided TDD Workflow",
+  "suitePath": "/Users/brb/_devspace/centian-benchmarks/benchmarks/context_sprawl_v1",
+  "invocationDir": "/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks/context_sprawl_v1/20260515094728_current_gemini_run",
+  "outputRoot": "/Users/brb/_devspace/centian-benchmarks/.centian/benchmarks",
+  "startedAt": "2026-05-15T09:47:28.139462+02:00",
+  "endedAt": "2026-05-15T10:05:03.025507+02:00",
+  "status": "completed",
+  "repeat": 10,
+  "agents": [
+    "gemini"
+  ],
+  "caseIds": [
+    "bug_fix_v1"
+  ],
+  "templateVariants": [
+    {
+      "name": "current",
+      "sourceDir": "/Users/brb/_devspace/centian-benchmarks/task-templates"
+    }
+  ],
+  "runs": [
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "gemini",
+      "templateVariant": "current",
+      "attempt": 1,
+      "relativeRunDir": "runs/current_gemini_bug_fix_v1_attempt_001",
+      "status": "completed"
+    },
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "gemini",
+      "templateVariant": "current",
+      "attempt": 2,
+      "relativeRunDir": "runs/current_gemini_bug_fix_v1_attempt_002",
+      "status": "completed"
+    },
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "gemini",
+      "templateVariant": "current",
+      "attempt": 3,
+      "relativeRunDir": "runs/current_gemini_bug_fix_v1_attempt_003",
+      "status": "completed"
+    },
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "gemini",
+      "templateVariant": "current",
+      "attempt": 4,
+      "relativeRunDir": "runs/current_gemini_bug_fix_v1_attempt_004",
+      "status": "completed"
+    },
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "gemini",
+      "templateVariant": "current",
+      "attempt": 5,
+      "relativeRunDir": "runs/current_gemini_bug_fix_v1_attempt_005",
+      "status": "completed"
+    },
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "gemini",
+      "templateVariant": "current",
+      "attempt": 6,
+      "relativeRunDir": "runs/current_gemini_bug_fix_v1_attempt_006",
+      "status": "completed"
+    },
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "gemini",
+      "templateVariant": "current",
+      "attempt": 7,
+      "relativeRunDir": "runs/current_gemini_bug_fix_v1_attempt_007",
+      "status": "completed"
+    },
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "gemini",
+      "templateVariant": "current",
+      "attempt": 8,
+      "relativeRunDir": "runs/current_gemini_bug_fix_v1_attempt_008",
+      "status": "completed"
+    },
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "gemini",
+      "templateVariant": "current",
+      "attempt": 9,
+      "relativeRunDir": "runs/current_gemini_bug_fix_v1_attempt_009",
+      "status": "completed"
+    },
+    {
+      "caseId": "bug_fix_v1",
+      "caseName": "MyOrgAPI payload bug fix",
+      "agentId": "gemini",
+      "templateVariant": "current",
+      "attempt": 10,
+      "relativeRunDir": "runs/current_gemini_bug_fix_v1_attempt_010",
+      "status": "completed"
+    }
+  ]
+}

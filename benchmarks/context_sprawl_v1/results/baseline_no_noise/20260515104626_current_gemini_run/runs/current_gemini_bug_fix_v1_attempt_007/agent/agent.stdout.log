@@ -1,0 +1,230 @@
+
+===== Demo run 2026-05-15T10:56:01+02:00 (gemini) =====
+{
+  "session_id": "b289bbe4-d4bc-4270-bd34-09529e593a7c",
+  "response": "The task is complete, and the bug where free-plan users received a 400 error because the `role` field was incorrectly included has been fixed. I've verified this with a new regression test in `test_regression.py` and confirmed that all existing tests in `test_user_payload.py` still pass.\n\nThe bug in `user_payload.py` where the `role` field was incorrectly included for free-plan users (tenant IDs starting with `free_`) has been fixed. This was verified through a new regression test in `test_regression.py`, ensuring compliance with the MyOrgAPI specification that mandates the omission of the `role` field for these tenants. All existing tests in `test_user_payload.py` also pass.",
+  "stats": {
+    "models": {
+      "gemini-3-flash-preview": {
+        "api": {
+          "totalRequests": 68,
+          "totalErrors": 1,
+          "totalLatencyMs": 246065
+        },
+        "tokens": {
+          "input": 147761,
+          "prompt": 1203800,
+          "candidates": 6891,
+          "total": 1212685,
+          "cached": 1056039,
+          "thoughts": 1994,
+          "tool": 0
+        },
+        "roles": {
+          "main": {
+            "totalRequests": 65,
+            "totalErrors": 1,
+            "totalLatencyMs": 228757,
+            "tokens": {
+              "input": 139009,
+              "prompt": 1195048,
+              "candidates": 6490,
+              "total": 1201538,
+              "cached": 1056039,
+              "thoughts": 0,
+              "tool": 0
+            }
+          },
+          "utility_loop_detector": {
+            "totalRequests": 3,
+            "totalErrors": 0,
+            "totalLatencyMs": 17308,
+            "tokens": {
+              "input": 8752,
+              "prompt": 8752,
+              "candidates": 401,
+              "total": 11147,
+              "cached": 0,
+              "thoughts": 1994,
+              "tool": 0
+            }
+          }
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 63,
+      "totalSuccess": 58,
+      "totalFail": 5,
+      "totalDurationMs": 6316,
+      "totalDecisions": {
+        "accept": 62,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {
+        "mcp_centian_centian.task_register": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 33,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_docs___get_docs": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 25,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_filesystem___read_text_file": {
+          "count": 5,
+          "success": 5,
+          "fail": 0,
+          "durationMs": 133,
+          "decisions": {
+            "accept": 5,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_centian.task_complete_onboarding": {
+          "count": 2,
+          "success": 2,
+          "fail": 0,
+          "durationMs": 30,
+          "decisions": {
+            "accept": 2,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_centian.task_complete_planning": {
+          "count": 4,
+          "success": 2,
+          "fail": 2,
+          "durationMs": 83,
+          "decisions": {
+            "accept": 4,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_centian.task_start_step": {
+          "count": 16,
+          "success": 15,
+          "fail": 1,
+          "durationMs": 2068,
+          "decisions": {
+            "accept": 16,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_filesystem___write_file": {
+          "count": 5,
+          "success": 5,
+          "fail": 0,
+          "durationMs": 132,
+          "decisions": {
+            "accept": 5,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_centian.task_complete_step": {
+          "count": 11,
+          "success": 11,
+          "fail": 0,
+          "durationMs": 2081,
+          "decisions": {
+            "accept": 11,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_filesystem___edit_file": {
+          "count": 8,
+          "success": 8,
+          "fail": 0,
+          "durationMs": 220,
+          "decisions": {
+            "accept": 8,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_shell___execute_command": {
+          "count": 7,
+          "success": 7,
+          "fail": 0,
+          "durationMs": 1474,
+          "decisions": {
+            "accept": 7,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_centian.task_resume": {
+          "count": 1,
+          "success": 0,
+          "fail": 1,
+          "durationMs": 17,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_filesystem___execute_command": {
+          "count": 1,
+          "success": 0,
+          "fail": 1,
+          "durationMs": 0,
+          "decisions": {
+            "accept": 0,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_centian.task_restart": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 20,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        }
+      }
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}

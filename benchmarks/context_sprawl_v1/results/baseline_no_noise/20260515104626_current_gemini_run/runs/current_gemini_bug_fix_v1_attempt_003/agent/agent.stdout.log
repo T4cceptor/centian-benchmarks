@@ -1,0 +1,192 @@
+
+===== Demo run 2026-05-15T10:50:13+02:00 (gemini) =====
+{
+  "session_id": "6de4b620-c16e-4c98-9e7f-9ae1933a69f7",
+  "response": "I have fixed the bug where free-plan tenants incorrectly included the `role` field in their API payloads. I established a failing regression test in `test_regression.py`, implemented the fix in `user_payload.py` to omit the `role` field for any `tenant_id` starting with `free_`, and verified that all new and existing tests pass.",
+  "stats": {
+    "models": {
+      "gemini-3-flash-preview": {
+        "api": {
+          "totalRequests": 24,
+          "totalErrors": 0,
+          "totalLatencyMs": 55425
+        },
+        "tokens": {
+          "input": 53440,
+          "prompt": 364796,
+          "candidates": 2425,
+          "total": 369986,
+          "cached": 311356,
+          "thoughts": 2765,
+          "tool": 0
+        },
+        "roles": {
+          "main": {
+            "totalRequests": 24,
+            "totalErrors": 0,
+            "totalLatencyMs": 55425,
+            "tokens": {
+              "input": 53440,
+              "prompt": 364796,
+              "candidates": 2425,
+              "total": 369986,
+              "cached": 311356,
+              "thoughts": 2765,
+              "tool": 0
+            }
+          }
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 25,
+      "totalSuccess": 24,
+      "totalFail": 1,
+      "totalDurationMs": 2518,
+      "totalDecisions": {
+        "accept": 25,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {
+        "mcp_centian_centian.task_list_templates": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 24,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_centian.task_register": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 24,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_filesystem___read_multiple_files": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 39,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_docs___get_docs": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 37,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_centian.task_complete_onboarding": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 19,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_centian.task_complete_planning": {
+          "count": 2,
+          "success": 1,
+          "fail": 1,
+          "durationMs": 40,
+          "decisions": {
+            "accept": 2,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_centian.task_start_step": {
+          "count": 5,
+          "success": 5,
+          "fail": 0,
+          "durationMs": 544,
+          "decisions": {
+            "accept": 5,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_filesystem___write_file": {
+          "count": 2,
+          "success": 2,
+          "fail": 0,
+          "durationMs": 54,
+          "decisions": {
+            "accept": 2,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_shell___execute_command": {
+          "count": 5,
+          "success": 5,
+          "fail": 0,
+          "durationMs": 1148,
+          "decisions": {
+            "accept": 5,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_centian.task_complete_step": {
+          "count": 4,
+          "success": 4,
+          "fail": 0,
+          "durationMs": 532,
+          "decisions": {
+            "accept": 4,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "mcp_centian_filesystem___edit_file": {
+          "count": 2,
+          "success": 2,
+          "fail": 0,
+          "durationMs": 57,
+          "decisions": {
+            "accept": 2,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        }
+      }
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}
